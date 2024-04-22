@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artist Events</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Events for Artists</h1>
+
+    <!-- Artist selection form -->
+    <form method="GET" action="{{ url_for('main.index') }}">
+        <label for="artist">Select an artist:</label>
+        <select id="artist" name="artist_id">
+            <option value="">All Artists</option>
+            {% for artist in artists %}
+                <option value="{{ artist.artist_id }}" {% if artist.artist_id == selected_artist %}selected{% endif %}>
+                    {{ artist.artist_name }}
+                </option>
+            {% endfor %}
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
+    <hr>
+
+    <!-- Display events based on selected artist -->
+    <h2>Events</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Event ID</th>
+                <th>Artist Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in events %}
+                <tr>
+                    <td>{{ event.event_id }}</td>
+                    <td>{{ event.artist.artist_name }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

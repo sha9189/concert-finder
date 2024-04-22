@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS artist;
+DROP TABLE IF EXISTS artist CASCADE;
 
 CREATE TABLE artist (
-    artist_id VARCHAR(255) NOT NULL,
+    artist_id VARCHAR(255) PRIMARY KEY,
     artist_name VARCHAR(255) NOT NULL
 );
