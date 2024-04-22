@@ -1,0 +1,10 @@
+use this:
+pip install psycopg2-binary
+
+
+API List:
+1. 200 items per call, for USA ans Music segment
+https://app.ticketmaster.com/discovery/v2/events?apikey=QOXJm5N0BfIVGZvP2ECxYEGMMm2tvimu&locale=*&size=200&countryCode=US&segmentName=Music
+
+2. Default page size, US Music
+"API_URL": "https://app.ticketmaster.com/discovery/v2/events?apikey={API_KEY}&locale=*&page={PAGE_NUM}&countryCode=US&segmentName=Music"
