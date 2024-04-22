@@ -9,9 +9,5 @@
         "port": "5432",
         "user": "postgres",
         "password": "postgres"
-    },
-    "Paths": {
-        "data_dir": "/path/to/data",
-        "log_dir": "/path/to/logs"
     }
 }
