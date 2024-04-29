@@ -47,3 +47,36 @@ JOIN Venue ON Event.Venue_ID = Venue.Venue_ID
 JOIN State ON Venue.State_Code = State.State_Code
 JOIN Country ON State.Country_Code = Country.Country_Code
 ORDER BY Event.Event_Start_Date DESC;
+
+
+
+WITH temp as (
+SELECT * FROM
+event 
+FULL OUTER JOIN event_artist_bridge USING (event_id)
+FULL OUTER JOIN artist USING (artist_id)
+FULL OUTER JOIN event_genre_bridge USING (event_id)
+FULL OUTER JOIN genre USING (genre_id)
+FULL OUTER JOIN event_venue_bridge USING (event_id)
+FULL OUTER JOIN venue USING (venue_id)
+FULL OUTER JOIN state USING (state_code) 
+ORDER BY state_code DESC
+) 
+SELECT
+    event_id,
+    event_name,
+    STRING_AGG(DISTINCT artist_name, ', ') AS artists,
+    STRING_AGG(DISTINCT genre_name, ', ') AS genres,
+    STRING_AGG(DISTINCT venue_name, ', ') AS venues,
+    STRING_AGG(DISTINCT state_name, ', ') AS states
+FROM temp 
+group by event_id,
+    event_name;
+
+
+
+
+
+
+
+
