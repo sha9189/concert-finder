@@ -5,16 +5,17 @@ from tqdm import tqdm
 
 config = load_config()
 
-# def fetch_api_data():
-#     """Function that makes API call and returns list of events, each event being in json format"""
-#     url = config["API"]["API_URL"]
-#     payload = {}
-#     headers = {}
-#     response = requests.request("GET", url, headers=headers, data=payload)
-#     response_json = response.json()
-#     events_json = response_json['_embedded']['events']
-#     events = [event_json for event_json in events_json]
-#     return events
+def fetch_api_data_by_page_num(page_num):
+    """Function that makes API call and returns list of events, each event being in json format"""
+    init_url = config["API"]["API_URL"]
+    url = init_url.replace("{PAGE_NUM}", str(page_num))
+    payload = {}
+    headers = {}
+    response = requests.request("GET", url, headers=headers, data=payload)
+    response_json = response.json()
+    events_json = response_json['_embedded']['events']
+    events = [event_json for event_json in events_json]
+    return events
 
 
 def fetch_api_data(page_limit=None):

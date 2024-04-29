@@ -1,7 +1,8 @@
 {
     "API": {
         "API_KEY": "QOXJm5N0BfIVGZvP2ECxYEGMMm2tvimu",
-        "API_URL": "https://app.ticketmaster.com/discovery/v2/events?apikey={API_KEY}&locale=*&size=200&page={PAGE_NUM}&countryCode=US&segmentName=Music"
+        "API_URL": "https://app.ticketmaster.com/discovery/v2/events?apikey={API_KEY}&locale=*&size=199&page={PAGE_NUM}&countryCode=US&segmentName=Music"
+    
     },
     "Database": {
         "host": "localhost",

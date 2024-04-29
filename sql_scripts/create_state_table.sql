@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS state CASCADE;
+
+CREATE TABLE state (
+   state_code VARCHAR(255) PRIMARY KEY NOT NULL,
+   state_name VARCHAR(255) NOT NULL,
+   country_name VARCHAR(255) NOT NULL,
+   country_code VARCHAR(255) NOT NULL
+);

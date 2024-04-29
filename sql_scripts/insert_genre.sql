@@ -1,0 +1,15 @@
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAeA', 'Rock', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAv6', 'Country', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAeF', 'World', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAvl', 'Other', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAvt', 'Metal', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAev', 'Pop', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAJ6', 'Latin', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAva', 'Folk', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAee', 'R&B', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAv1', 'Hip-Hop/Rap', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAvF', 'Dance/Electronic', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAe6', 'Undefined', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAeJ', 'Classical', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAvv', 'Alternative', 'Music');
+INSERT INTO genre (genre_id, genre_name, segment) VALUES ('KnvZfZ7vAe7', 'Religious', 'Music');

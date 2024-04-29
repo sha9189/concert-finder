@@ -3,12 +3,21 @@ pip install psycopg2-binary
 
 
 API List:
-1. 200 items per call, for USA ans Music segment
-https://app.ticketmaster.com/discovery/v2/events?apikey={API_KEY}&locale=*&size=200&page={PAGE_NUM}&countryCode=US&segmentName=Music
+1. 199 items per call, for USA ans Music segment
+https://app.ticketmaster.com/discovery/v2/events?apikey={API_KEY}&locale=*&size=199&page={PAGE_NUM}&countryCode=US&segmentName=Music
+"API_URL": "https://app.ticketmaster.com/discovery/v2/events?apikey={API_KEY}&locale=*&size=199&page={PAGE_NUM}&countryCode=US&segmentName=Music",
+
 
 2. Default page size, US Music
 "API_URL": "https://app.ticketmaster.com/discovery/v2/events?apikey={API_KEY}&locale=*&page={PAGE_NUM}&countryCode=US&segmentName=Music"
 
 
+3. Search for attractions by keyword:
+"API_URL": "https://app.ticketmaster.com/discovery/v2/attractions.json?size=1&apikey={API_KEY}"
+
+
 Web App Help ChatGPT:
 Name: DMQL Web App Code
+
+
+Project must include atleast 1 multidimensional index and a few single column index

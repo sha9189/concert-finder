@@ -3,6 +3,7 @@ import psycopg2
 from psycopg2 import OperationalError, Error
 import os
 import pickle
+import pandas as pd
 
 def load_config(json_file_path="config.json"):
     """Function to load json config file"""
@@ -57,7 +58,8 @@ def generate_insert_statements(dataframe, table_name):
     for _, row in dataframe.iterrows():
         # Construct INSERT statement for each row
         columns = ', '.join(row.index.tolist())
-        values = ', '.join([f"'{value}'" if isinstance(value, str) else str(value) for value in row.tolist()])
+        # values = ', '.join([f"'{value}'" if isinstance(value, str) else str(value) for value in row.tolist()])
+        values = ', '.join([f"'{value}'" if isinstance(value, str) else 'NULL' if pd.isnull(value) else str(value) for value in row.tolist()])
         insert_statement = f"INSERT INTO {table_name} ({columns}) VALUES ({values});"
         insert_statements.append(insert_statement)
     return insert_statements

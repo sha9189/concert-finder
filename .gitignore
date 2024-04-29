@@ -7,3 +7,10 @@ venv/
 all_old
 
 data/event_small.p
+
+etl/00_playground.ipynb
+
+
+Milestone Tracker.xlsx
+
+concert-finder.code-workspace
