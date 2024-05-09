@@ -7,7 +7,5 @@ CREATE TABLE venue (
     venue_postal_code VARCHAR(20),
     venue_lat FLOAT,
     venue_long FLOAT,
-    venue_address VARCHAR(255),
-    state_code VARCHAR(2), 
-    FOREIGN KEY (state_code) REFERENCES state(state_code)
+    venue_address VARCHAR(255)
 );

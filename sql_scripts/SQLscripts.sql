@@ -72,11 +72,3 @@ SELECT
 FROM temp 
 group by event_id,
     event_name;
-
-
-
-
-
-
-
-
